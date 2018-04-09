@@ -1,0 +1,242 @@
+<ion-header >
+    <ion-navbar hideBackButton="true" color = "ziya">
+      <ion-buttons  left>
+            <button ion-button icon ion-navicon icon-only (click)="goBack()">
+              <ion-icon ios="ios-arrow-back" ></ion-icon>
+            </button>
+      </ion-buttons> 
+      <ion-title><img src="assets/imgs/logo1.png" height="40px" width="100px" style="margin-top:3px;"></ion-title>
+      <ion-buttons right>      
+                <img src="assets/imgs/ios7-search.png" height="28px" style="margin-right:4px;margin-top:4px;">
+      </ion-buttons>
+    </ion-navbar>
+  <!-- 轮播图 autoplay:自动轮播间歇时间;speed:切换轮播图速度;-->
+  <ion-slides pager autoplay="1000" speed="1000" loop="true" autoplayDisableOnInteration="true">
+    <ion-slide ng-repeat="item in productDetail.goodsBanner">
+      <img src="assets/imgs/banner.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/banner.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/banner.png">
+    </ion-slide>
+  </ion-slides>
+</ion-header>
+<ion-content>
+    <ion-segment [(ngModel)]="change" color="ziya">
+        <ion-segment-button value="message" class="button button-large"> 找信息</ion-segment-button>
+        <ion-segment-button value="serve"  class="button button-large button-positive"> 找服务</ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="change">
+      <br>
+        <div class="maindiv" *ngSwitchCase="'message'">
+          <div class="img-content-top">
+              <div class="one" >
+                <img src="assets/imgs/ion1.png" width="30" height="32"><br>
+                <span>资产包转让</span>
+              </div>
+                <div class="two" >
+                  <img src="assets/imgs/ion2.png" width="33" height="32"><br>
+                  <span>债券转让</span>
+                </div>
+                <div class="three" >
+                  <img src="assets/imgs/ion3.png" width="33" height="32"><br>
+                  <span>固产转让</span>
+                </div>
+                <div class="four">
+                  <img src="assets/imgs/ion4.png" width="33" height="32"><br>
+                  <span>商业保理</span>
+                </div>
+          </div>
+          <div class="img-content-bottom">
+                <div class="five">
+                  <img src="assets/imgs/ion5.png" width="33" height="32"><br>
+                  <span>典当担保</span>
+                </div>
+                <div class="six">
+                  <img src="assets/imgs/ion6.png" width="33" height="32"><br>
+                  <span>融资借贷</span>
+                </div>
+                <div class="seven">
+                  <img src="assets/imgs/ion7.png" width="33" height="32"><br>
+                  <span>悬赏信息</span>
+                </div>
+                <div class="eight">
+                  <img src="assets/imgs/ion8.png" width="33" height="32"><br>
+                  <span>尽职调查</span>
+                </div>
+          </div>
+         
+        </div>
+        <div *ngSwitchCase="'serve'">
+          xyz
+        </div>  
+      </div>
+      <hr style="height:15px;color:#F9F9F9;">
+      <img src="assets/imgs/good.png" height="15px" style="margin-left:5px;margin-top:5px;">
+      &nbsp;
+      <span style="color:gray;margin-top:2px;">优质信息</span>
+      <br>
+      <hr>
+      <div class="list">
+          <span style="margin-left:10px;">资产包转让</span>&nbsp;&nbsp;&nbsp;<span style="color:gray; font-size:0.9">--FB001</span>
+          <br /> 
+          <ion-list>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/ion1.png">
+                </ion-avatar>
+                <div class="left">
+                    <p>地区：北京</p> 
+                    <p>来源：银行</p>
+                    <p>资产包类型：抵押</p>
+                </div>
+                <div class="center">
+                    <p style="color:firebrick;font-size:20px;">500万</p>
+                    <p>总金额</p>
+                </div>
+                <div class="center-right">
+                    <p style="color:firebrick;font-size:20px;">300万</p>
+                    <p>转让价</p>
+                </div>
+                <div class="right">
+                    <ion-buttons right>      
+                        <img src="assets/imgs/arrow-right.PNG" style="padding-top:15px;" height="33px" style="margin-right:4px;margin-top:4px;">
+                    </ion-buttons>
+                </div>
+              </ion-item>
+              
+              <span style="margin-left:10px;margin-top:4px;">资产包转让</span>&nbsp;&nbsp;&nbsp;<span style="color:gray; font-size:0.9">--FB001</span>
+              <hr>
+              <ion-item>
+                
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/ion1.png">
+                  </ion-avatar>
+                  <div class="left">
+                      <p>地区：北京</p> 
+                      <p>来源：银行</p>
+                      <p>资产包类型：抵押</p>
+                  </div>
+                  <div class="center">
+                      <p style="color:firebrick;font-size:20px;">500万</p>
+                      <p>总金额</p>
+                  </div>
+                  <div class="center-right">
+                      <p style="color:firebrick;font-size:20px;">300万</p>
+                      <p>转让价</p>
+                  </div>
+                  <div class="right">
+                      <ion-buttons right>      
+                          <img src="assets/imgs/arrow-right.PNG" style="padding-top:15px;" height="33px" style="margin-right:4px;margin-top:4px;">
+                      </ion-buttons>
+                  </div>
+                </ion-item>
+                <span style="margin-left:10px;margin-top:4px;">资产包转让</span>&nbsp;&nbsp;&nbsp;<span style="color:gray; font-size:0.9">--FB001</span>
+                <hr><hr>
+                <ion-item>  
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/ion1.png">
+                    </ion-avatar>
+                    <div class="left">
+                        <p>地区：北京</p> 
+                        <p>来源：银行</p>
+                        <p>资产包类型：抵押</p>
+                    </div>
+                    <div class="center">
+                        <p style="color:firebrick;font-size:20px;">500万</p>
+                        <p>总金额</p>
+                    </div>
+                    <div class="center-right">
+                        <p style="color:firebrick;font-size:20px;">300万</p>
+                        <p>转让价</p>
+                    </div>
+                    <div class="right">
+                        <ion-buttons right>      
+                            <img src="assets/imgs/arrow-right.PNG" style="padding-top:15px;" height="33px" style="margin-right:4px;margin-top:4px;">
+                        </ion-buttons>
+                    </div>
+                  </ion-item>
+                  <span style="margin-left:10px;margin-top:4px;">资产包转让</span>&nbsp;&nbsp;&nbsp;<span style="color:gray; font-size:0.9">--FB001</span>
+                  <hr><hr>
+                  <ion-item>  
+                      <ion-avatar item-start>
+                        <img src="assets/imgs/ion1.png">
+                      </ion-avatar>
+                      <div class="left">
+                          <p>地区：北京</p> 
+                          <p>来源：银行</p>
+                          <p>资产包类型：抵押</p>
+                      </div>
+                      <div class="center">
+                          <p style="color:firebrick;font-size:20px;">500万</p>
+                          <p>总金额</p>
+                      </div>
+                      <div class="center-right">
+                          <p style="color:firebrick;font-size:20px;">300万</p>
+                          <p>转让价</p>
+                      </div>
+                      <div class="right">
+                          <ion-buttons right>      
+                              <img src="assets/imgs/arrow-right.PNG" style="padding-top:15px;" height="33px" style="margin-right:4px;margin-top:4px;">
+                          </ion-buttons>
+                      </div>
+                    </ion-item>
+                    <span style="margin-left:10px;margin-top:4px;">资产包转让</span>&nbsp;&nbsp;&nbsp;<span style="color:gray; font-size:0.9">--FB001</span>
+                    <hr>
+                    <ion-item>  
+                        <ion-avatar item-start>
+                          <img src="assets/imgs/ion1.png">
+                        </ion-avatar>
+                        <div class="left">
+                            <p>地区：北京</p> 
+                            <p>来源：银行</p>
+                            <p>资产包类型：抵押</p>
+                        </div>
+                        <div class="center">
+                            <p style="color:firebrick;font-size:20px;">500万</p>
+                            <p>总金额</p>
+                        </div>
+                        <div class="center-right">
+                            <p style="color:firebrick;font-size:20px;">300万</p>
+                            <p>转让价</p>
+                        </div>
+                        <div class="right">
+                            <ion-buttons right>      
+                                <img src="assets/imgs/arrow-right.PNG" style="padding-top:15px;" height="33px" style="margin-right:4px;margin-top:4px;">
+                            </ion-buttons>
+                        </div>
+                      </ion-item>
+                      <span style="margin-left:10px;margin-top:4px;">资产包转让</span>&nbsp;&nbsp;&nbsp;<span style="color:gray; font-size:0.9">--FB001</span>
+                      <hr>
+                      <ion-item>  
+                          <ion-avatar item-start>
+                            <img src="assets/imgs/ion1.png">
+                          </ion-avatar>
+                          <div class="left">
+                              <p>地区：北京</p> 
+                              <p>来源：银行</p>
+                              <p>资产包类型：抵押</p>
+                          </div>
+                          <div class="center">
+                              <p style="color:firebrick;font-size:20px;">500万</p>
+                              <p>总金额</p>
+                          </div>
+                          <div class="center-right">
+                              <p style="color:firebrick;font-size:20px;">300万</p>
+                              <p>转让价</p>
+                          </div>
+                          <div class="right">
+                              <ion-buttons right>      
+                                  <img src="assets/imgs/arrow-right.PNG" style="padding-top:15px;" height="33px" style="margin-right:4px;margin-top:4px;">
+                              </ion-buttons>
+                          </div>
+                        </ion-item>
+            </ion-list>
+      </div>
+    
+</ion-content>
+    
+<!-- 菜单栏 -->
+
