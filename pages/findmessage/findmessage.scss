@@ -1,0 +1,31 @@
+#imgs{
+    margin-left: 0px;
+    margin-top: 0;
+}
+.search::input-placeholder { text-align: center }
+.left{
+    margin:0 auto;
+}
+.right{
+    margin-right: 0px;
+    margin-top: 5%px;
+
+}
+.center-right{
+    padding-left: 0px;
+}
+.center{
+    padding-left: 0 auto;
+    float: left;
+}
+.search{
+    height: 39px;
+    width: 80%;
+    margin-top: 4px;
+    border-radius: 19px; 
+    text-align:center;
+    background-image:url("assets/imgs/search.png") no-repeat scroll right center transparent;
+}
+.search-input:focus{
+    text-align: left;
+}

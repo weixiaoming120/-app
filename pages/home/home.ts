@@ -1,3 +1,4 @@
+
 import { Component,ViewChild  } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { NavController,ModalController  } from 'ionic-angular';
@@ -5,6 +6,8 @@ import { NavController,ModalController  } from 'ionic-angular';
 import { SubpagePage } from '../subpage/subpage';
 import { LoginPage } from '../login/login';
 import { RegistPage } from '../regist/regist';
+import { FindmessagePage } from '../findmessage/findmessage';
+
 
 @Component({
   selector: 'page-home',
@@ -20,9 +23,12 @@ export class HomePage {
     this.slides.stopAutoplay();
   }
 
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
+  constructor(public naCtrl: NavController,public navCtrl: NavController,public modalCtrl: ModalController) {
 
   }
+
+// 获取屏幕宽高
+
   change = "message";
   // menu
   // presentModal() {
@@ -34,9 +40,9 @@ export class HomePage {
   }
   //返回按钮
 goBack(){
-
   this.navCtrl.push(RegistPage);
-
 }
-
+goFindMessage(){
+  this.naCtrl.push(FindmessagePage);
+}
 }
